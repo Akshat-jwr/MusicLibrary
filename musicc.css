@@ -1,0 +1,628 @@
+* {
+    text-align: center;
+    user-select: none;
+    transition: all 0.1s;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+#themes{
+    transform: translateX(30px);
+}
+
+#dark,
+#light {
+    width: max-content;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    border: solid 0.1rem;
+    font-weight: bold;
+    background: rgba(139, 139, 149, 0.2);
+}
+
+#theme {
+    display: none;
+}
+
+#dark {
+    display: none;
+}
+
+#light {
+    display: block;
+}
+
+body:has(#theme:checked) {
+    background: rgb(217, 217, 240);
+    color: rgb(0, 0, 0);
+}
+
+body:has(#theme:checked) #dark {
+    display: block;
+}
+
+body:has(#theme:checked) #light {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    color: azure;
+}
+
+nav {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+nav ul {
+
+    margin: 0;
+    padding: 0;
+    background-color: rgb(73, 69, 69);
+    display: flex;
+    height: 90px;
+    list-style-type: none;
+    align-items: center;
+    flex-direction: row;
+}
+
+#NAVBAR {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+nav img {
+    padding: 5px;
+    width: 80px;
+}
+
+nav h3 {
+    padding: 10px;
+}
+
+h3 {
+    color: rgb(255, 177, 21);
+    font-size: 25px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    padding: 50px;
+    color: antiquewhite;
+    text-decoration-line: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: aqua;
+}
+
+nav ul li a:active {
+    transition: 0;
+    color: rgb(122, 122, 235);
+}
+
+div {
+    margin: 25px;
+}
+
+#INTRO {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-content: space-between;
+    flex-grow: 1;
+    transform: translateY(40px);
+}
+
+h1{
+    padding: 20px;
+    margin: 10px;
+    font-size: 50px;
+    transform: translateY(50px);
+
+}
+
+h1:has(#theme:checked) #dark{
+    color: rgb(216, 216, 180);
+}
+
+h1:has(#theme:checked) #light{
+    color: rgb(15, 15, 15);
+}
+
+form {
+    padding: 20px;
+}
+
+#INTRO button {
+    background-color: azure;
+    height: 55px;
+    width: 150px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+#INTRO button:hover {
+    color: blue;
+    background-color: aqua;
+    transform: scale(1.05);
+}
+
+#INTRO p {
+    font-size: 30px;
+    padding: 20px;
+    transform: translateY(20px);
+}
+
+#Featured p {
+    font-size: 20px;
+    padding: 20px;
+    transform: translateY(20px);
+}
+
+svg {
+    height: 600px;
+    padding: 20px;
+    transform: translateY(40px);
+}
+
+.FEATUREDCARDS {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.FEATUREDCARDS img {
+    width: 250px;
+    height: 260px;
+    padding: 10px;
+}
+
+figure {
+    height: 470px;
+    width: 270px;
+    display: inline-block;
+    border: 1px dotted gray;
+    margin: 10px;
+    position: relative;
+    transition: 0.4s;
+}
+
+figure img {
+    vertical-align: top;
+}
+
+figure figcaption {
+    padding: 10px;
+    border: 1px dotted blue;
+    text-align: center;
+}
+
+.song-count {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+figure:hover {
+    transform: scale(1.25);
+}
+
+#Recommended p {
+    font-size: 20px;
+    padding: 20px;
+}
+
+#recommendedcards img {
+    height: 250px;
+    width: 250px;
+}
+
+.know-more {
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+#recommendedcards figure:hover .know-more {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px; 
+    border-radius: 12px;
+    font-size: 10px;
+}
+
+button {
+    background-color: inherit;
+    margin: 5px;
+    padding: 0;
+    transition: 0.4s;
+}
+
+#Recommended button {
+    transform: scale(1.5);
+}
+
+#Recommended button:hover {
+    transform: scale(1.8);
+}
+
+button:hover {
+    transform: scale(1.3);
+}
+
+#search-container {
+    padding: 10px;
+    border: 1px dotted rgb(109, 222, 209);
+    text-align: left;
+}
+
+#Recommended input {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+#Recommended input:hover {
+    transform: scale(1.02);
+}
+
+#reviews figure {
+    height: 650px;
+}
+
+#reviews {
+    transform: translateY(20px);
+}
+
+#Recommended p {
+    transform: translateY(20px);
+}
+
+#Intro p {
+    transform: translateY(20px);
+}
+
+#reviews img {
+    height: 350px;
+}
+
+#accept {
+    padding: 10px;
+    margin: 40px;
+    border: 1px dotted rgb(201, 222, 109);
+}
+
+#accept h3 {
+    padding: 25px;
+    font-size: 40px;
+}
+
+#accept button {
+    background-color: azure;
+    padding: 5px;
+}
+
+#accept button:hover {
+    color: blue;
+    background-color: aqua;
+    transform: scale(1.05);
+}
+
+#footer {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    background-color: rgb(73, 69, 69);
+    display: flex;
+    height: 150px;
+}
+
+.social {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateX(-50px);
+}
+
+.social li a {
+    font-size: 30px;
+    color: azure;
+    padding: 25px;
+    margin: 5px;
+    transform: translateY(0);
+    text-decoration-line: none;
+    transition: 0.5s;
+}
+
+li {
+    list-style-type: none;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer>li {
+    margin: 45px;
+}
+
+.social li a:hover {
+    transform: translateY(-10px);
+    color: aqua;
+}
+
+#tc {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(25px);
+}
+
+#tc li a {
+    font-size: 30px;
+    color: azure;
+    padding: 25px;
+    margin: 5px;
+    text-decoration-line: none;
+    transition: 0.5s;
+}
+
+#tc li a:hover {
+    color: rgb(191, 182, 244);
+}
+
+#topbutton {
+    background-color: azure;
+    color: black;
+    width: 100px;
+    height: 55px;
+    padding: 5px;
+    transform: translate(240px, 20px);
+}
+
+#topbutton:hover {
+    background-color: rgb(62, 232, 232);
+    color: rgb(64, 0, 255);
+}
+
+#topbutton a {
+    text-decoration-line: none;
+    font-size: large;
+}
+
+#topbutton a:hover {
+    text-decoration-line: underline;
+    transform: scale(1.2);
+}
+
+figure #follow {
+    width: max-content;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    border: solid 0.1rem;
+    margin: 10px;
+    font-weight: bold;
+    background: rgba(139, 139, 149, 0.2);
+    transform: translateX(55px);
+    transition: 0.2s;
+}
+
+figure #following {
+    color: greenyellow;
+    width: max-content;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    border: solid 0.1rem;
+    margin: 10px;
+    font-weight: bold;
+    background: rgba(139, 139, 149, 0.2);
+    transform: translateX(45px);
+    transition: 0.2s;
+}
+
+figure .follows {
+    display: none;
+}
+
+figure #follow {
+    transition: 0.2s;
+    display: block;
+}
+
+figure #following {
+    transition: 0.2s;
+    display: none;
+}
+
+figure :has(.follows:checked) #follow{
+    display: none;
+}
+
+figure :has(.follows:checked) #following{
+    display: block;
+}
+
+figure #follow:hover{
+    background-color: azure;
+    color: black;
+    transition: 0.2s;
+}
+
+figure #following:hover{
+    background-color: greenyellow;
+    color: black;
+    transition: 0.2s;
+}
+
+dialog{
+    margin: 0;
+    position: relative;
+    transform: translateY(-370px);
+    z-index: 2000;
+}
+
+#hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger span{
+    width: 25px;
+    display: block;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    position: relative;
+    transition: 0.3s;
+} 
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    display: none;
+    transition: 0.3s;
+    height: 200px;
+}
+
+#menu a{
+    color: black;
+    margin: 10px;
+}
+
+#menu a:hover{
+    color: rgb(17, 0, 255);
+}
+
+#hamcheck{
+    display: none;
+}
+
+:has(#hamcheck:checked) #menu{
+    display: block;
+}
+
+@media (max-width:768px){
+    #hamburger{
+        display: block;
+        z-index: 1001;
+    }
+
+    nav ul{
+        height: 120px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #NAVBAR{
+        display: none;
+    }
+
+    #themes{
+        transform: scale(0.7);
+    }
+
+
+    #INTRO{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        font-size: xx-small;
+        flex-wrap: wrap;
+        justify-content: center;
+        transform: scale(0.6);
+        padding: 0;
+        margin: 0;
+
+    }
+
+    #INTRO p{
+        width: 600px;
+    }
+
+    #INTRO img{
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    #reviews{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .FEATUREDCARDS{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #recommendedcards figure{
+        margin: 60px;
+    }
+
+    #footer{
+        height: 500px;
+    }
+
+    .social li a{
+        padding: 20px;
+    }
+
+    #tc{
+        transform: translateY(-10px);
+    }
+
+    #tc li a{
+        padding: 15px;
+    }
+
+    #topbutton{
+        transform: translateX(70px);
+    }
+}
+
+@media (max-width: 1250px){
+    #INTRO{
+        flex-direction: column;
+    }
+
+    #footer{
+        height: 300px;
+    }
+
+    .footer{
+        height: 300px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+}
